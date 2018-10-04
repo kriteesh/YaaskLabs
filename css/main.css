@@ -1,0 +1,46 @@
+html,body{
+    height :100%;
+    width  :100%;
+    margin : 0 ;
+    overflow : hidden;
+    background : black;
+}
+.name{
+    position: absolute;
+    bottom: 25vh;
+    left: 10vw;
+    width: 80vw;
+    height: 10vh;
+    line-height: 10vh;
+    font-family: 'Neucha',sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 10vh;
+}
+.navbar{
+    position : fixed;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    bottom : 5vh;
+    height : 10vh;
+    justify-content:space-around;
+    z-index: 2;
+    color : yellow;
+    font-size: 5vh;
+    line-height: 10vh;
+    font-family: 'Neucha', sans-serif;
+}
+.navbar>div
+{
+    padding-left : 2vw;
+    padding-right : 2vw;
+    transition : 3s;
+    cursor : pointer;
+    border-top : 1px dashed white;
+    border-bottom : 1px dashed white;
+}
+.navbar>div:hover{
+   border-top : 1px solid white;   
+   border-bottom : 1px solid white;
+}
