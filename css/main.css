@@ -9,10 +9,12 @@ html,body{
 }
 
 svg{
-    position: absolute;
-    top : 5vh;
-    left : calc(50% - 30vh);
+    position : absolute;
+    top : 5vmin;
+    left : calc(50% - 172.5px);
 }
+
+
 .name{
     position: absolute;
     bottom: 25vh;
@@ -37,6 +39,7 @@ svg{
     font-size: 5vmin;
     line-height: 10vmin;
     font-family: 'Bangers', sans-serif;
+    text-align: center;
 }
 .navbar>a
 {
@@ -50,6 +53,24 @@ svg{
 }
 .navbar>a:hover{
     background : #131313;
+}
+
+@media (orientation: landscape){
+    svg { left : calc(50vmin - 172.5px); top : calc(50vmin - 172.5px);}
+    .navbar{
+        flex-direction: column;
+        left: 60%;
+        width: 30%;
+        height: 60%;
+        top: 30%;
+    }
+    .name{
+        top : 15%;
+        width : 40%;
+        left : 55%;
+
+    }
+  
 }
 
 
