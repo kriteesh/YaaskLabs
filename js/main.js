@@ -11,7 +11,7 @@ let logo = {x :w/2,y:h/3};
 let numParticles = 100;
 		
 let phi = 1.618;
-let scale = 15;
+let scale = 20;
 let coords = new Array(5).fill(1).map((x,i)=>scale*Math.pow(phi,i));
 
 let colorArr = ["#ffff00a3","#ffffffa6"]
@@ -58,7 +58,7 @@ let rightWhy =(x1,x2,x3)=>(color)=>{
 
 
 let  controls = new function() {
-    this.outRadius = scale*10;
+    this.outRadius = scale*8;
     this.inRadius = this.outRadius*0.9;
     this.lineWidth = scale/2; 
     this.trx1 = {x : logo.x + coords[3] , y : logo.y - coords[3]};
@@ -69,8 +69,8 @@ let  controls = new function() {
     this.tlx2 = {x : logo.x  + coords[0], y : logo.y - coords[1]};
     this.tlx3 = {x : logo.x  - coords[1] , y : logo.y + coords[0]};
    
-    this.foreground = '#ffff00e0';
-    this.background = 'black';
+    this.background = 'yellow'; //ffff66
+    this.foreground = 'black';
 }
 
 
@@ -86,7 +86,7 @@ let drawParts = (parts) =>{
  })
 }
 let background =()=>{
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "#151515";
     ctx.fillRect(0,0,w,h);
 }
 let temp  = 0; 
@@ -100,7 +100,7 @@ let animate =()=>{
 
     outerCircle(controls.outRadius)(controls.background);
 		
-	innerCircle(controls.inRadius)(controls.lineWidth*(1-0.5*Math.sin(temp)))(controls.foreground);
+	innerCircle(controls.inRadius)(controls.lineWidth)(controls.foreground);
 	rightWhy(controls.trx1,controls.trx2,controls.trx3)(controls.foreground);
 	rightWhy(controls.tlx1,controls.tlx2,controls.tlx3)(controls.foreground);
 	

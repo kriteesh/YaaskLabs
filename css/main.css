@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous|Bangers");
+
 html,body{
     height :100%;
     width  :100%;
     margin : 0 ;
     overflow : hidden;
-    background : black;
+    background : linear-gradient(-45deg,indigo, #131313);
+}
+
+svg{
+    position: absolute;
+    top : 5vh;
+    left : calc(50% - 30vh);
 }
 .name{
     position: absolute;
@@ -12,35 +20,37 @@ html,body{
     width: 80vw;
     height: 10vh;
     line-height: 10vh;
-    font-family: 'Neucha',sans-serif;
+    font-family: 'Righteous',cursive;
     color: white;
     text-align: center;
-    font-size: 10vh;
+    font-size: 10vmin;
 }
 .navbar{
     position : fixed;
     display:flex;
     flex-direction: row;
     width:100%;
-    bottom : 5vh;
-    height : 10vh;
+    bottom : 5vmin;
+    height : 10vmin;
     justify-content:space-around;
     z-index: 2;
-    color : yellow;
-    font-size: 5vh;
-    line-height: 10vh;
-    font-family: 'Neucha', sans-serif;
+    font-size: 5vmin;
+    line-height: 10vmin;
+    font-family: 'Bangers', sans-serif;
 }
-.navbar>div
+.navbar>a
 {
-    padding-left : 2vw;
-    padding-right : 2vw;
+    padding: 0 2vw 0 2vw;
     transition : 3s;
     cursor : pointer;
-    border-top : 1px dashed white;
-    border-bottom : 1px dashed white;
+    border: 1px dashed white;
+    color: yellow;
+    text-decoration: none;
+    transition :  500ms;
 }
-.navbar>div:hover{
-   border-top : 1px solid white;   
-   border-bottom : 1px solid white;
+.navbar>a:hover{
+    background : #131313;
 }
+
+
+

@@ -1,0 +1,69 @@
+:root{
+    --yellow : yellow;
+}
+
+html,body{
+    width: 100%;
+    height : auto;
+    background:black;
+    margin : 0;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 20vh 40vh 30vh 10vh ;
+    grid-template-columns : 5vw 30vw 60vw 5vw ;
+    grid-template-areas : 'g1 logo leader g11'
+                          'g2 mission mission g21'
+                          'g3 member member g31'
+                          'g4 navbar navbar g41';
+    align-items: center;
+    justify-items: stretch; 
+    color: var(--yellow);      
+}
+
+
+.logo{
+    grid-area: logo;
+}
+
+.leader{
+    grid-area : leader;
+    border-bottom : 1px dashed white;
+}
+
+.mission{
+    grid-area : mission;
+    color : var(--yellow);
+}
+
+.members{
+    grid-area: mission;
+}
+
+.navbar{
+    grid-area: navbar;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    z-index: 2;
+    font-size: 5vh;
+    line-height: 10vh;
+    font-family: 'Neucha', monospace;
+}
+.navbar>a
+{
+    padding-left : 2vw;
+    padding-right : 2vw;
+    transition : 3s;
+    cursor : pointer;
+    border-top : 1px dashed white;
+    border-bottom : 1px dashed white;
+    color: var(--yellow);
+    text-decoration: none;
+}
+.navbar>a:hover{
+   border-top : 1px solid white;   
+   border-bottom : 1px solid white;
+}
+

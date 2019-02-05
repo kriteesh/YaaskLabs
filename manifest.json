@@ -1,0 +1,16 @@
+{
+"short_name": "Yaask",
+  "name": "YaaskLabs",
+  "theme_color": "yellow",
+  "background_color": "indigo",
+  "display": "standalone",
+  "orientation": "landscape",
+  "start_url": "index.html",
+	"icons": [
+    {
+      "src": "assets/yaask.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
