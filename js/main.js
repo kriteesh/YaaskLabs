@@ -1,14 +1,14 @@
 const canvas = document.querySelector('canvas');
-let w = canvas.width = window.innerWidth;
+let w = canvas.width = window.innerWidth/2;
 let h = canvas.height = window.innerHeight;
 
 let ctx = canvas.getContext("2d");
 			
 let x_o = w/2;
 let y_o = h/2;
-let logo = {x :w/2,y:h/3};
+let logo = {x :w/2,y:h/2};
 
-let numParticles = 100;
+let numParticles = 150;
 		
 let phi = 1.618;
 let scale = 20;
@@ -86,7 +86,7 @@ let drawParts = (parts) =>{
  })
 }
 let background =()=>{
-    ctx.fillStyle = "#151515";
+    ctx.fillStyle = "transparent";
     ctx.fillRect(0,0,w,h);
 }
 let temp  = 0; 
