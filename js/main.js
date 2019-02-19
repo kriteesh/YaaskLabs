@@ -1,6 +1,7 @@
+let box = document.getElementsByClassName('logo')[0];
 const canvas = document.querySelector('canvas');
-let w = canvas.width = window.innerWidth/2;
-let h = canvas.height = window.innerHeight;
+let w = canvas.width = box.clientWidth;
+let h = canvas.height = box.clientHeight;
 
 let ctx = canvas.getContext("2d");
 			
@@ -11,7 +12,7 @@ let logo = {x :w/2,y:h/2};
 let numParticles = 150;
 		
 let phi = 1.618;
-let scale = 20;
+let scale = 12;
 let coords = new Array(5).fill(1).map((x,i)=>scale*Math.pow(phi,i));
 
 let colorArr = ["#ffff00a3","#ffffffa6"]

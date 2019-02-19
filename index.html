@@ -11,24 +11,32 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
+  <div class="container">
+      <!-- <svg viewBox = "-10 -10 100 100">
+          <circle cx="200" cy="200" r="145" fill="yellow"/>
+          <circle cx="200" cy="200" r="131" stroke="black" stroke-width = "7.5" fill="yellow"/>
+          <path d="M 263 137 L 215 263 L 137 263" stroke ="black"/>
+          <path d="M 137 137 L 215 175 L 175 215" stroke ="black"/>
+        </svg> -->
+    <div class="logo"><canvas class= "fadeIn"></canvas></div>
     <div class="name">Yaask Labs</div>
     <div class="navbar">
-        <a href="about.html" class="fadeIn">About</a>
-        <a href="dashboard.html" class="fadeIn">Dashboard</a>
-        <a href="services.html" class="fadeIn">Services</a>
-    </div>
-    <canvas class= "bounce"></canvas>  
+        <a href="about.html" class='bounce'>About</a>
+        <a href="dashboard.html" class="bounce">Dashboard</a>
+        <a href="services.html" class="bounce">Services</a>
+    </div> 
+  </div>
     <script src="js/main.js"></script> 
 </body>
 <script>
-        if ('serviceWorker' in navigator) {
-          console.log("Will the service worker register?");
-          navigator.serviceWorker.register('service-worker.js')
-        .	then(function(reg){
-              console.log("Yes, it did.");
-            }).catch(function(err) {
-              console.log("No it didn't. This happened: ", err)
-            });
-        }
+        // if ('serviceWorker' in navigator) {
+        //   console.log("Will the service worker register?");
+        //   navigator.serviceWorker.register('service-worker.js')
+        // .	then(function(reg){
+        //       console.log("Yes, it did.");
+        //     }).catch(function(err) {
+        //       console.log("No it didn't. This happened: ", err)
+        //     });
+        // }
   </script>
 </html>
