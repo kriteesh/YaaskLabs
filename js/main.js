@@ -14,7 +14,10 @@ let numParticles = 150;
 let phi = 1.618;
 let scale = 10;
 
-if(window.innerWidth > window.innerHeight) { scale = 17} else{ scale = 10;}
+if(window.innerWidth > window.innerHeight) { 
+    scale = 13
+} 
+else{ scale = 10;}
 
 let coords = new Array(5).fill(1).map((x,i)=>scale*Math.pow(phi,i));
 
