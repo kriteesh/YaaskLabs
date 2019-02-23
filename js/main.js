@@ -15,9 +15,13 @@ let phi = 1.618;
 let scale = 10;
 
 if(window.innerWidth > window.innerHeight) { 
-    scale = 13
+    w = canvas.width = window.innerWidth/2;
+    h = canvas.height = window.innerHeight;
+    x_o = w/2;
+    y_o = h/2;
+    logo = {x :w/2,y:h/2};
+
 } 
-else{ scale = 10;}
 
 let coords = new Array(5).fill(1).map((x,i)=>scale*Math.pow(phi,i));
 
@@ -104,9 +108,7 @@ let animate =()=>{
     background();
     particles = update(particles);
     drawParts(particles);
-
     outerCircle(controls.outRadius)(controls.background);
-		
 	innerCircle(controls.inRadius)(controls.lineWidth)(controls.foreground);
 	rightWhy(controls.trx1,controls.trx2,controls.trx3)(controls.foreground);
 	rightWhy(controls.tlx1,controls.tlx2,controls.tlx3)(controls.foreground);
