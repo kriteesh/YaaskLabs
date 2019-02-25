@@ -5,25 +5,182 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Yaask Labs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <style>
+        @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Bangers");
+        html,body{
+            margin : 0;
+            background : linear-gradient(45deg,indigo -100%,#131313);
+        }
+
+        .container{
+            display : grid;
+            grid-template-rows : 15vh 8vh auto 8vh auto 12vh;
+            grid-template-columns : 10vw 80vw 10vw; 
+            align-items: center;
+            grid-row-gap : 2vh;
+            justify-content: space-around;
+            color : white;
+            text-align : center;
+            font-family : 'Bangers',sans-serif;
+        }
+        .header{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            line-height: 12vh;
+            font-size: 8vh;
+            justify-self: center;
+        }
+        .mhead{
+            grid-row : 2 / 3;
+            grid-column : 2 / 3;
+            font-size : 5vh;
+            line-height : 5vh;
+            background : yellow;
+            color: #131313;
+        }
+        .mcontent{
+            grid-row : 3 / 4;
+            grid-column : 2 / 3;
+            font-size : 3.5vmin;
+            text-align: justify;
+            font-family : 'Yanone Kaffeesatz',sans-serif;
+        }
+        .memberHead{
+            grid-row : 4 / 5;
+            grid-column : 2 / 3;
+            background: yellow;
+            height: 5vh;
+            line-height: 5vh;
+            font-size: 5vh;
+            color: #131313;
+        }
+
+        .members{
+            grid-row : 5 / 6;
+            grid-column : 2 / 3;
+            display:flex;
+            flex-direction : column;
+            justify-content: space-around;
+        }
+        .member{
+            display : grid;
+            grid-template-columns: 1fr;
+            grid-template-rows : 8vh auto;
+            justify-content: center;
+            align-items: center; 
+            width : 100%;
+            height : 100%;
+        }
+        .name{
+            grid-row : 1 / 2;
+            grid-column : 1 / 2;
+            background: #9962fb;
+            height: 4vh;
+            line-height: 4vh;
+            /* font-size: 3vh; */
+            color: #131313;
+        }
         
+        .infoContainer{
+            grid-row : 2 / 3;
+            grid-column : 1 / 2;
+        }
+
+        .info{
+            text-align : justify;
+            font-family : 'Yanone Kaffeesatz',sans-serif;
+            font-size : 3.5vmin;
+        }
+        .pic{
+            float: left;
+            height: 30vmin;
+            width: 30vmin;
+            shape-outside: circle();
+            clip-path: circle( 50% at 50% 50%);
+            margin: 4vmin;
+        }
+        .navbar{
+            grid-row : 6 / 7;
+            grid-column : 2 / 3;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height : 8vh;
+        }
+        .navbar>a{
+            border : 1px dashed white;
+            text-decoration: none;
+            font-size : 4vmin;
+            line-height : 5vmin;
+            height : 5vmin;
+            padding : 1vh 2vw 1vh 2vw;
+            cursor : pointer;
+            border: 1px dashed white;
+            color: yellow;
+            text-decoration: none;
+            transition :  100ms;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo" id="yaska"></div>
-        <div class="leader">Yaask Labs</div>
-        <div class="mission">
-            <div>Mission</div>
-            <div>Content</div>
-        </div>
+        <div class="header">Yaask <img src="assets/yaask.png" width ="10%"> Labs</div>
+        <div class="mhead">Mission</div>
+        <div class="mcontent"></div>
+        <div class="memberHead">Members</div>
         <div class="members"></div>
-        <div class="navbar"> 
-            <a href="index.html">Home</a>
-            <a>Sneak</a>
-            <a>Services</a>
-        </div>
+    <div class="navbar">
+            <a href="index.html" class='bounce'>Home</a>
+            <a href="dashboard.html" class="bounce">Dashboard</a>
+            <a href="services.html" class="bounce">Services</a>
+    </div> 
     </div>
 </body>
+<script>
+    let mission = document.getElementsByClassName('mcontent')[0];
+    mission.innerText = "We at Yaask believe that the touchstone for education must be its utility - in solving real world problems, connecting better to our surroundings and finding fulfillment in the things we do. We focus particularly on Mathematics, Language, and Programming, subjects that can be powerful tools to forward one’s ambitions in life, but are often lost to ‘knowledge centric learning’ - being treated as facts and formulae to be memorized and repeated in tests. At Yaask, by focussing on skill based learning,  we aim to make sinister sounding subjects more real and intuitive, without losing their curricular relevance. We aim to enable students to see their curriculum as something they can engage with practically in a tangible setting, allowing them to learn with greater comprehension and retention, guiding them to success not only in test scores, but also in putting their knowledge to work for the benefit of themselves and the world.";
+
+    let members = document.getElementsByClassName('members')[0];
+
+    let bois = [
+        {
+            name : "Kriteesh Parashar",
+            info : "Kriteesh Parashar (IIT Delhi) worked for Mindspark - a popular e-learning platform - for 3 years as a content creator and technological developer. Concurrently he worked on large-scale assessment projects for SCERT Haryana and conducted pedagogic audits for private schools in Gujarat. Kriteesh has also worked on assessments as part of the team behind ASSET - a leading assessment product in India. In technology he primarily works with simulations, 2D/3D models, short games and machine learning based assessments. As part of pedagogy he specializes in misconception analysis, misconception based remediation and spacing effect based memory retention. Kriteesh’s list of interests include dance, history and music, and he frequently draws upon these to keep an open and interdisciplinary approach while creating enriching learning experiences.",
+            pic  : "assets/doga.jpg",
+            size : "100%"
+        },
+        {
+            name : "Soaham Sharma",
+            info : "Soaham Sharma (IIT Delhi) had his first teaching experience in his own twelfth grade, when due to the prolonged absence of the physics teacher he volunteered to take classes for his juniors. He was a founding member of Radiant eduventures - an institute for the sciences based in Rohini - and taught physics for school and competitive examinations before a desire to do something with a wider impact attracted him to the edtech sector. Prior to founding Yaask Labs soaham was most recently engaged at Excelsior American School, Gurgaon as a teacher for Mathematics and Physics - where he had been researching the school education scene from the inside, to better understand its challenges and opportunities.",
+            pic  : "assets/soaham.jpg",
+            size : "130%"
+        }
+    ];
+
+    bois.map(x=>{
+        let member = document.createElement('div');
+        member.className = "member";
+        let nameDiv = document.createElement('div');
+        nameDiv.className = 'name';
+        nameDiv.innerText = x.name;
+        let infoContainer = document.createElement('div');
+        infoContainer.className = 'infoContainer';
+        let picDiv = document.createElement('img');
+        picDiv.className = 'pic';
+        picDiv.style.background  = "url(" + x.pic + ")";
+        picDiv.style.backgroundSize  = x.size;
+        let infoDiv = document.createElement('p');
+        infoDiv.className = 'info';
+        infoDiv.innerText = x.info;
+        member.appendChild(nameDiv);
+        infoContainer.appendChild(picDiv);
+        infoContainer.appendChild(infoDiv);
+        member.appendChild(infoContainer);
+        members.appendChild(member);
+    })
+    
+
+</script>
+
 </html>
